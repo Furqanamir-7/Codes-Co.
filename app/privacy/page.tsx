@@ -16,13 +16,13 @@ export default function PrivacyPage() {
       <article className="bg-ivory py-16 text-black">
         <div className="mx-auto w-full max-w-3xl space-y-6 px-5 text-lg leading-relaxed text-black/80 sm:px-8">
           <p>
-            CODE & CO. is Furqan Amir’s studio in Lahore. If you use the contact form, we receive
+            CODE & CO. is Furqan Amir’s studio. If you use the contact form, we receive
             your name, email, the optional phone number, and the note you wrote. That message is
             used to reply to you. It is not sold.
           </p>
           <p>
             Without an email service connected, the form opens your own email app addressed to{" "}
-            <a className="underline decoration-maroon" href={`mailto:${site.email}`}>
+            <a className="font-medium text-maroon no-underline" href={`mailto:${site.email}`}>
               {site.email}
             </a>
             . In that case the message leaves from your account, not from a server we control.

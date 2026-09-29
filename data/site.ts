@@ -5,8 +5,6 @@ export const site = {
   phoneDisplay: "+92 326 2803870",
   phoneTel: "+923262803870",
   whatsappDigits: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923262803870",
-  location: "Lahore, Pakistan",
-  github: "https://github.com/Furqanamir-7",
   instagram: "https://www.instagram.com/codesandco.studio/",
   founder: "Furqan Amir",
 }

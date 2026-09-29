@@ -27,51 +27,56 @@ export default async function ContactPage({
           <Suspense fallback={<p className="text-black/60">Loading the form…</p>}>
             <ContactForm initialType={type} />
           </Suspense>
-          <aside className="space-y-6">
-            <div className="rounded-3xl bg-black p-6 text-ivory">
-              <h2 className="font-display text-2xl">Direct</h2>
-              <ul className="mt-4 space-y-3 text-sm text-grey">
+          <aside>
+            <div className="rounded-3xl bg-black p-7 text-ivory sm:p-8">
+              <h2 className="font-display text-3xl">Direct</h2>
+              <p className="mt-3 text-sm leading-relaxed text-grey">
+                Messages are read every day. Expect a reply within a day.
+              </p>
+              <ul className="mt-8 divide-y divide-ivory/10">
                 <li>
-                  <a className="text-ivory underline decoration-maroon" href={`mailto:${site.email}`}>
-                    {site.email}
+                  <a href={`mailto:${site.email}`} className="group block py-5 no-underline">
+                    <span className="block text-xs tracking-[0.16em] text-grey uppercase">Email</span>
+                    <span className="mt-2 block font-display text-2xl leading-tight break-all text-ivory transition group-hover:text-white">
+                      {site.email}
+                    </span>
                   </a>
                 </li>
                 <li>
-                  <a className="text-ivory underline decoration-maroon" href={`tel:${site.phoneTel}`}>
-                    {site.phoneDisplay}
+                  <a href={`tel:${site.phoneTel}`} className="group block py-5 no-underline">
+                    <span className="block text-xs tracking-[0.16em] text-grey uppercase">Phone</span>
+                    <span className="mt-2 block font-display text-3xl leading-tight text-ivory transition group-hover:text-white">
+                      {site.phoneDisplay}
+                    </span>
                   </a>
                 </li>
                 <li>
                   <a
-                    className="text-ivory underline decoration-maroon"
                     href={whatsappHref(site.whatsappDigits, "Hello CODE & CO.")}
                     target="_blank"
                     rel="noreferrer"
+                    className="group block py-5 no-underline"
                   >
-                    WhatsApp
+                    <span className="block text-xs tracking-[0.16em] text-grey uppercase">WhatsApp</span>
+                    <span className="mt-2 block font-display text-3xl leading-tight text-ivory transition group-hover:text-white">
+                      {site.phoneDisplay}
+                    </span>
                   </a>
                 </li>
                 <li>
                   <a
-                    className="text-ivory underline decoration-maroon"
                     href={site.instagram}
                     target="_blank"
                     rel="noreferrer"
+                    className="group block py-5 no-underline"
                   >
-                    Instagram
+                    <span className="block text-xs tracking-[0.16em] text-grey uppercase">Instagram</span>
+                    <span className="mt-2 block font-display text-2xl leading-tight text-ivory transition group-hover:text-white">
+                      codesandco.studio
+                    </span>
                   </a>
                 </li>
               </ul>
-              <p className="mt-5 text-sm leading-relaxed text-grey">
-                Messages are read every day. Expect a reply within a day.
-              </p>
-            </div>
-            <div className="rounded-3xl border border-black/10 bg-white p-6">
-              <h2 className="font-display text-2xl">Studio</h2>
-              <p className="mt-3 text-sm leading-relaxed text-black/70">
-                {site.location}. Clients in other cities are normal — the site does not need us in
-                the room.
-              </p>
             </div>
           </aside>
         </div>

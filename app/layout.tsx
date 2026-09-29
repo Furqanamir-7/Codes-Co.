@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
-import { DM_Sans, Syne } from "next/font/google"
+import { DM_Sans, Outfit } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "@/components/layout/footer"
 import { Loader } from "@/components/layout/loader"
@@ -10,10 +10,10 @@ import { site } from "@/data/site"
 import { getSiteUrl } from "@/lib/utils"
 import "./globals.css"
 
-const syne = Syne({
+const heading = Outfit({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-syne",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-heading",
 })
 
 const dm = DM_Sans({
@@ -58,18 +58,13 @@ const organization = {
     "@type": "Person",
     name: site.founder,
   },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Lahore",
-    addressCountry: "PK",
-  },
-  sameAs: [site.github, site.instagram],
+  sameAs: [site.instagram],
   slogan: "Websites • Ideas • Beyond",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${syne.variable} ${dm.variable} h-full antialiased`}>
+    <html lang="en" className={`${heading.variable} ${dm.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-black text-ivory">
         <a
           href="#main"

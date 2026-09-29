@@ -214,7 +214,7 @@ export function PortfolioFacts() {
           </div>
           <div className="rounded-2xl bg-maroon p-6 text-ivory">
             <dt className="text-sm text-ivory/80">Studio</dt>
-            <dd className="mt-3 font-display text-3xl leading-tight">Founder-led, in Lahore</dd>
+            <dd className="mt-3 font-display text-4xl leading-tight sm:text-5xl">Founder-led</dd>
           </div>
         </motion.dl>
       </div>
