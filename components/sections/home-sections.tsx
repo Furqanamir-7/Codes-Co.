@@ -46,10 +46,10 @@ export function ServicesPreview() {
             <Reveal key={service.href} delay={index * 0.04}>
               <Link
                 href={service.href}
-                className="block h-full rounded-2xl border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-maroon hover:shadow-[0_18px_40px_-28px_rgba(157,0,41,0.7)]"
+                className="block h-full rounded-2xl border border-maroon bg-maroon-tint p-6 text-ivory transition hover:-translate-y-1 hover:bg-maroon-deep"
               >
-                <h3 className="font-display text-2xl">{service.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-black/70">{service.text}</p>
+                <h3 className="font-display text-2xl text-ivory">{service.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-grey">{service.text}</p>
               </Link>
             </Reveal>
           ))}
@@ -123,12 +123,12 @@ export function Why() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {why.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
-              <article className="h-full rounded-2xl border border-black/10 bg-white p-5">
+              <article className="h-full rounded-2xl border border-maroon bg-maroon-tint p-5 text-ivory">
                 <span className="inline-flex size-10 items-center justify-center rounded-full bg-maroon text-sm text-ivory">
                   {index + 1}
                 </span>
-                <h3 className="mt-4 font-display text-xl">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-black/70">{item.text}</p>
+                <h3 className="mt-4 font-display text-xl text-ivory">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-grey">{item.text}</p>
               </article>
             </Reveal>
           ))}

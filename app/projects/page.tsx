@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         short note on what the site is for — no invented metrics.
       </PageHero>
       <section className="bg-black pb-24">
-        <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
           <ProjectBrowser />
         </div>
       </section>

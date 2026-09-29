@@ -79,14 +79,20 @@ export default function ServicesPage() {
             {packages.map((pack) => (
               <article
                 key={pack.name}
-                className={`flex h-full flex-col rounded-3xl bg-white p-6 ${
-                  pack.highlighted ? "border-2 border-maroon" : "border border-black/10"
+                className={`flex h-full flex-col rounded-3xl p-6 text-ivory ${
+                  pack.highlighted
+                    ? "border-2 border-ivory bg-maroon"
+                    : "border border-maroon bg-maroon-tint"
                 }`}
               >
-                <h3 className="font-display text-2xl">{pack.name}</h3>
-                <p className="mt-2 font-display text-xl text-maroon">{pack.price}</p>
-                <p className="mt-3 text-sm leading-relaxed text-black/70">{pack.text}</p>
-                <ul className="mt-4 space-y-2 text-sm text-black/80">
+                <h3 className="font-display text-2xl text-ivory">{pack.name}</h3>
+                <p className={`mt-2 font-display text-xl ${pack.highlighted ? "text-ivory" : "text-grey"}`}>
+                  {pack.price}
+                </p>
+                <p className={`mt-3 text-sm leading-relaxed ${pack.highlighted ? "text-ivory/90" : "text-grey"}`}>
+                  {pack.text}
+                </p>
+                <ul className="mt-4 space-y-2 text-sm text-ivory/90">
                   {pack.points.map((point) => (
                     <li key={point}>{point}</li>
                   ))}
