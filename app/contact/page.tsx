@@ -51,6 +51,16 @@ export default async function ContactPage({
                     WhatsApp
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="text-ivory underline decoration-maroon"
+                    href={site.instagram}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Instagram
+                  </a>
+                </li>
               </ul>
               <p className="mt-5 text-sm leading-relaxed text-grey">
                 Messages are read every day. Expect a reply within a day.

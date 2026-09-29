@@ -63,7 +63,7 @@ const organization = {
     addressLocality: "Lahore",
     addressCountry: "PK",
   },
-  sameAs: [site.github],
+  sameAs: [site.github, site.instagram],
   slogan: "Websites • Ideas • Beyond",
 }
 

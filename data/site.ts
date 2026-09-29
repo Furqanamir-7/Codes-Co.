@@ -7,6 +7,7 @@ export const site = {
   whatsappDigits: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923262803870",
   location: "Lahore, Pakistan",
   github: "https://github.com/Furqanamir-7",
+  instagram: "https://www.instagram.com/codesandco.studio/",
   founder: "Furqan Amir",
 }
 

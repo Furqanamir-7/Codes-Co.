@@ -93,6 +93,9 @@ export default function AboutPage() {
               <a className="underline decoration-maroon" href={site.github} target="_blank" rel="noreferrer">
                 GitHub
               </a>
+              <a className="underline decoration-maroon" href={site.instagram} target="_blank" rel="noreferrer">
+                Instagram
+              </a>
               <a className="underline decoration-maroon" href={whatsappHref(site.whatsappDigits)} target="_blank" rel="noreferrer">
                 WhatsApp
               </a>

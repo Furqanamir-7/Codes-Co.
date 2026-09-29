@@ -27,6 +27,14 @@ function GitHubIcon() {
   )
 }
 
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4 fill-current">
+      <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm10 1.8H7A2.2 2.2 0 0 0 4.8 7v10A2.2 2.2 0 0 0 7 19.2h10a2.2 2.2 0 0 0 2.2-2.2V7A2.2 2.2 0 0 0 17 4.8ZM12 8.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2Zm0 1.6A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8Zm4.35-2.95a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9Z" />
+    </svg>
+  )
+}
+
 function WhatsAppIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4 fill-current">
@@ -94,6 +102,15 @@ export function Footer() {
               className="inline-flex size-10 items-center justify-center rounded-full border border-ivory/15 text-ivory hover:border-maroon hover:text-maroon"
             >
               <GitHubIcon />
+            </a>
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="inline-flex size-10 items-center justify-center rounded-full border border-ivory/15 text-ivory hover:border-maroon hover:text-maroon"
+            >
+              <InstagramIcon />
             </a>
             <a
               href={whatsappHref(site.whatsappDigits, "Hello CODE & CO. I have a project in mind.")}
