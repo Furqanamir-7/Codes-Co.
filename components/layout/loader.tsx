@@ -59,7 +59,7 @@ export function Loader() {
         />
       </div>
       <p className="mt-6 font-display text-xl tracking-tight text-ivory">
-        CODE <span className="text-maroon">&</span> CO.
+        codes <span className="text-maroon">&</span> co.
       </p>
       <p className="mt-2 text-xs tracking-[0.22em] text-grey uppercase">
         Websites · Ideas · Beyond

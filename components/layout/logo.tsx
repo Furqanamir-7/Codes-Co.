@@ -6,7 +6,7 @@ export function Logo({ className = "" }: { className?: string }) {
     <Link
       href="/"
       className={`inline-flex items-center gap-2.5 ${className}`}
-      aria-label="CODE & CO. home"
+      aria-label="codes & co. home"
     >
       <Image
         src="/brand/mark-cutout.webp"
@@ -17,7 +17,7 @@ export function Logo({ className = "" }: { className?: string }) {
         priority
       />
       <span className="font-display text-lg tracking-tight text-ivory sm:text-xl">
-        CODE <span className="text-maroon">&</span> CO.
+        codes <span className="text-maroon">&</span> co.
       </span>
     </Link>
   )

@@ -73,28 +73,33 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="flex min-h-0 flex-col gap-3"
+          className="flex flex-col gap-3"
         >
-          <div className="overflow-hidden rounded-3xl border border-ivory/10 shadow-[0_30px_80px_-40px_rgba(104,0,24,0.8)]">
+          <div className="shrink-0 overflow-hidden rounded-3xl border border-ivory/10 shadow-[0_30px_80px_-40px_rgba(104,0,24,0.8)]">
             <Image
               src="/brand/lockup-hero.webp"
               alt="CODE & CO. wordmark and the tagline Websites, Ideas, Beyond"
               width={1400}
               height={788}
               priority
-              className="h-auto max-h-[min(24dvh,240px)] w-full object-contain object-left sm:max-h-[min(28dvh,280px)]"
+              className="block h-auto w-[132%] max-w-none"
             />
           </div>
-          <div className="rounded-2xl border border-ivory/10 bg-maroon-tint p-3 shadow-lg sm:p-4">
+          <div className="shrink-0 rounded-2xl border border-ivory/10 bg-maroon-tint p-3 shadow-lg sm:p-4">
             <div className="mb-2 flex gap-1.5" aria-hidden="true">
               <span className="size-2.5 rounded-full bg-maroon" />
               <span className="size-2.5 rounded-full bg-ivory/30" />
               <span className="size-2.5 rounded-full bg-ivory/15" />
             </div>
-            <pre className="overflow-x-auto font-mono text-xs leading-relaxed text-grey sm:text-sm">
-              <code>
-                {typed}
-                <span className="ml-0.5 inline-block h-4 w-1.5 translate-y-0.5 bg-maroon motion-safe:animate-pulse" />
+            <pre className="font-mono text-[0.8rem] leading-relaxed text-grey sm:text-sm">
+              <code className="grid whitespace-pre">
+                <span className="invisible col-start-1 row-start-1" aria-hidden="true">
+                  {full}
+                </span>
+                <span className="col-start-1 row-start-1">
+                  {typed}
+                  <span className="ml-0.5 inline-block h-[1em] w-[0.45em] translate-y-px bg-maroon motion-safe:animate-pulse" />
+                </span>
               </code>
             </pre>
           </div>
