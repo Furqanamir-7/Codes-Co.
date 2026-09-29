@@ -102,11 +102,11 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <div>
             <p className="text-sm text-grey">Next project</p>
-            <Link href={`/projects/${next.slug}`} className="font-display text-3xl text-ivory">
+            <Link href={`/projects/${next.slug}`} className="block font-display text-3xl leading-tight text-ivory no-underline">
               {next.title}
             </Link>
           </div>
-          <Link href="/projects" className="text-sm text-ivory underline decoration-maroon underline-offset-4">
+          <Link href="/projects" className="inline-flex min-h-11 items-center text-sm text-ivory no-underline">
             All projects
           </Link>
         </div>

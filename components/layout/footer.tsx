@@ -68,13 +68,13 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-grey">
             {site.emails.map((address) => (
               <li key={address}>
-                <a className="hover:text-ivory no-underline" href={`mailto:${address}`}>
+                <a className="inline-flex min-h-11 items-center break-all hover:text-ivory no-underline" href={`mailto:${address}`}>
                   {address}
                 </a>
               </li>
             ))}
             <li>
-              <a className="hover:text-ivory" href={`tel:${site.phoneTel}`}>
+              <a className="inline-flex min-h-11 items-center hover:text-ivory no-underline" href={`tel:${site.phoneTel}`}>
                 {site.phoneDisplay}
               </a>
             </li>
@@ -85,7 +85,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
-              className="inline-flex size-10 items-center justify-center rounded-full border border-ivory/15 text-ivory hover:border-maroon hover:text-maroon"
+              className="inline-flex size-11 items-center justify-center rounded-full border border-ivory/15 text-ivory hover:border-maroon hover:text-maroon"
             >
               <InstagramIcon />
             </a>
@@ -94,7 +94,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
-              className="inline-flex size-10 items-center justify-center rounded-full border border-ivory/15 text-ivory hover:border-maroon hover:text-maroon"
+              className="inline-flex size-11 items-center justify-center rounded-full border border-ivory/15 text-ivory hover:border-maroon hover:text-maroon"
             >
               <WhatsAppIcon className="size-4" />
             </a>
@@ -102,7 +102,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-ivory/10">
-        <p className="mx-auto w-full max-w-6xl px-5 py-5 text-sm text-grey sm:px-8">
+        <p className="mx-auto w-full max-w-6xl px-5 py-5 pr-20 pb-24 text-sm text-grey sm:px-8 sm:pr-24">
           © {year} CODE & CO. Websites, ideas, beyond.
         </p>
       </div>

@@ -25,12 +25,12 @@ export default function ServicesPage() {
       </PageHero>
       <div className="bg-black">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 pb-8 sm:px-8 lg:grid-cols-[220px_1fr] lg:gap-16">
-          <nav className="sticky top-20 z-30 -mx-5 flex gap-2 overflow-x-auto bg-black/90 px-5 py-3 backdrop-blur lg:top-28 lg:mx-0 lg:block lg:space-y-2 lg:bg-transparent lg:px-0" aria-label="Service categories">
+          <nav className="sticky top-16 z-30 flex flex-wrap gap-2 bg-black/95 py-3 backdrop-blur sm:top-20 lg:top-28 lg:block lg:space-y-1 lg:bg-transparent lg:py-0" aria-label="Service categories">
             {serviceGroups.map((group) => (
               <a
                 key={group.id}
                 href={`#${group.id}`}
-                className="shrink-0 rounded-full border border-ivory/15 px-3 py-1.5 text-sm text-grey hover:border-maroon hover:text-ivory lg:block lg:rounded-none lg:border-0 lg:px-0 lg:py-1"
+                className="inline-flex min-h-11 items-center rounded-full border border-ivory/15 px-3 text-sm text-grey hover:border-maroon hover:text-ivory lg:flex lg:min-h-10 lg:rounded-none lg:border-0 lg:px-0"
               >
                 {group.title}
               </a>
@@ -57,7 +57,7 @@ export default function ServicesPage() {
                       </ul>
                       <Link
                         href={`/contact?type=${item.quote}`}
-                        className="mt-5 inline-flex text-sm text-ivory underline decoration-maroon underline-offset-4"
+                        className="mt-5 inline-flex min-h-11 items-center text-sm text-ivory no-underline hover:text-white"
                       >
                         Get a quote
                       </Link>

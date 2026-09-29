@@ -93,7 +93,7 @@ export function FeaturedProjects() {
                   </div>
                 </a>
                 <div className="px-5 pb-5">
-                  <Link href={`/projects/${project.slug}`} className="text-sm text-ivory underline decoration-maroon underline-offset-4">
+                  <Link href={`/projects/${project.slug}`} className="inline-flex min-h-11 items-center text-sm text-ivory no-underline">
                     Case study
                   </Link>
                 </div>
@@ -102,7 +102,7 @@ export function FeaturedProjects() {
           ))}
         </div>
         <div className="mt-8">
-          <Link href="/projects" className="text-ivory underline decoration-maroon underline-offset-4">
+          <Link href="/projects" className="inline-flex min-h-11 items-center text-ivory no-underline">
             All projects
           </Link>
         </div>
@@ -147,7 +147,7 @@ export function Process() {
             Five steps, in this order. Numbered because they really do follow each other.
           </SectionHeading>
         </Reveal>
-        <ol className="mt-12 grid gap-4 md:grid-cols-5">
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {process.map((item, index) => (
             <Reveal key={item.step} delay={index * 0.05}>
               <li className="h-full rounded-2xl border border-ivory/10 bg-maroon-tint p-5">

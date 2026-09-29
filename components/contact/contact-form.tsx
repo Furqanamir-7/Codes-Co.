@@ -204,7 +204,7 @@ export function ContactForm({ initialType }: { initialType?: string }) {
           href={whatsappHref(site.whatsappDigits, "Hello CODE & CO. I would rather chat about a project.")}
           target="_blank"
           rel="noreferrer"
-          className="text-base font-medium text-black no-underline hover:text-maroon"
+          className="inline-flex min-h-11 items-center text-base font-medium text-black no-underline hover:text-maroon"
         >
           Prefer chat? WhatsApp
         </a>

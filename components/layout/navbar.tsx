@@ -56,7 +56,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-8">
         <Logo />
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-4 md:flex lg:gap-7" aria-label="Primary">
           {nav.map((item) => {
             const active = isActive(pathname, item.href)
             return (
@@ -64,7 +64,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 data-active={active}
-                className="group relative text-sm text-ivory/80 transition hover:text-ivory data-[active=true]:text-ivory"
+                className="group relative inline-flex min-h-11 items-center text-sm text-ivory/80 transition hover:text-ivory data-[active=true]:text-ivory"
               >
                 {item.label}
                 <span
@@ -87,7 +87,7 @@ export function Navbar() {
           </Button>
           <button
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-full border border-ivory/20 text-ivory lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-ivory/20 text-ivory md:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -101,7 +101,7 @@ export function Navbar() {
         {open ? (
           <motion.div
             id="mobile-menu"
-            className="fixed inset-0 top-16 z-50 bg-black lg:hidden"
+            className="fixed inset-0 top-16 z-50 overflow-y-auto bg-black sm:top-20 md:hidden"
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={reduce ? undefined : { opacity: 0 }}
