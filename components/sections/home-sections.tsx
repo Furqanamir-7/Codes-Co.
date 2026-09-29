@@ -76,8 +76,12 @@ export function FeaturedProjects() {
                 <a href={project.url} target="_blank" rel="noreferrer" className="block">
                   <div className="relative aspect-[16/11] overflow-hidden">
                     <Image
-                      src={project.image}
-                      alt={project.imageAlt}
+                      src={project.slug === "priceyra" ? "/projects/priceyra-home.webp" : project.image}
+                      alt={
+                        project.slug === "priceyra"
+                          ? "Priceyra homepage with the globe graphic visible"
+                          : project.imageAlt
+                      }
                       fill
                       sizes="(min-width: 1024px) 33vw, 100vw"
                       className="object-cover object-top transition duration-700 group-hover:scale-105 motion-reduce:transition-none"
