@@ -83,7 +83,7 @@ export default function AboutPage() {
           </ul>
           <p className="mt-8 text-sm text-black/70">
             Want the work, not the biography?{" "}
-            <Link className="text-black underline decoration-maroon" href="/projects">
+            <Link className="font-medium text-maroon no-underline" href="/projects">
               See the projects.
             </Link>
           </p>

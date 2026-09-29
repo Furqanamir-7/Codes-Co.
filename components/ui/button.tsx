@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-br from-maroon to-maroon-deep text-ivory shadow-[0_12px_30px_-16px_rgba(157,0,41,0.9)] hover:brightness-110",
+          "bg-gradient-to-br from-maroon to-maroon-deep text-ivory shadow-[0_12px_30px_-16px_rgba(157,0,41,0.9)] hover:from-maroon-deep hover:to-maroon-deep",
         outline:
           "border-ivory/35 bg-transparent text-ivory hover:border-ivory hover:bg-ivory/10",
         ivory:
@@ -19,7 +19,7 @@ const buttonVariants = cva(
           "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
-        link: "text-primary underline-offset-4 hover:underline",
+        link: "text-primary no-underline",
       },
       size: {
         default:
