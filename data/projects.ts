@@ -68,7 +68,6 @@ export const projects: Project[] = [
       "Covers coaching programs, centres, and tours.",
       "Built as a fan- and parent-facing front door, not an internal tool.",
     ],
-    featured: true,
   },
   {
     slug: "the-paper-story",
@@ -89,7 +88,6 @@ export const projects: Project[] = [
       "Wedding invitations and e-invites have their own place in the navigation.",
       "The public description commits to worldwide delivery.",
     ],
-    featured: true,
   },
   {
     slug: "aaz-trading",
@@ -130,6 +128,7 @@ export const projects: Project[] = [
       "Walks through how the product is meant to be used.",
       "Offers a free start, with room to upgrade.",
     ],
+    featured: true,
   },
   {
     slug: "texonomy",
@@ -190,6 +189,7 @@ export const projects: Project[] = [
       "Built for drivers and owners, not for a generic membership brochure.",
       "Keeps the public line — Truckers of the World, Unite! — intact.",
     ],
+    featured: true,
   },
   {
     slug: "ayyn",
