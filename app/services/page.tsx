@@ -58,7 +58,7 @@ export default function ServicesPage() {
                           <li key={point}>· {point}</li>
                         ))}
                       </ul>
-                      <QuoteChooser id={item.id} service={item.title} />
+                      <QuoteChooser id={item.id} service={item.title} quote={item.quote} />
                     </article>
                   ))}
                 </div>
