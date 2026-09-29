@@ -164,7 +164,7 @@ export function ContactForm({ initialType }: { initialType?: string }) {
         <p className="rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-black" role="status">
           Your email app should open with this note addressed to {site.email}. Send it from there and
           we will reply within a day. If nothing opened,{" "}
-          <a className="underline decoration-maroon" href={status.mailto}>
+          <a className="font-medium text-maroon no-underline" href={status.mailto}>
             try the email link again
           </a>
           .
@@ -185,7 +185,7 @@ export function ContactForm({ initialType }: { initialType?: string }) {
           href={whatsappHref(site.whatsappDigits, "Hello CODE & CO. I would rather chat about a project.")}
           target="_blank"
           rel="noreferrer"
-          className="text-sm text-black underline decoration-maroon underline-offset-4"
+          className="text-base font-medium text-black no-underline hover:text-maroon"
         >
           Prefer chat? WhatsApp
         </a>
