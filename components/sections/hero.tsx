@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { motion, useReducedMotion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -73,18 +72,8 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="flex flex-col gap-3"
+          className="flex flex-col justify-center"
         >
-          <div className="shrink-0 overflow-hidden rounded-3xl border border-ivory/10 shadow-[0_30px_80px_-40px_rgba(104,0,24,0.8)]">
-            <Image
-              src="/brand/lockup-hero.webp"
-              alt="CODE & CO. wordmark and the tagline Websites, Ideas, Beyond"
-              width={1400}
-              height={788}
-              priority
-              className="block h-auto w-[132%] max-w-none"
-            />
-          </div>
           <div className="shrink-0 rounded-2xl border border-ivory/10 bg-maroon-tint p-3 shadow-lg sm:p-4">
             <div className="mb-2 flex gap-1.5" aria-hidden="true">
               <span className="size-2.5 rounded-full bg-maroon" />
