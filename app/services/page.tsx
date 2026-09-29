@@ -19,14 +19,14 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <PageHero title="Sites for businesses, shops, and the days that matter.">
+      <PageHero tight title="Sites for businesses, shops, and the days that matter.">
         Pick the kind of site you need. If it is not on this list, write anyway — the custom line
         exists for that.
       </PageHero>
       <div className="bg-black">
         <div className="mx-auto w-full max-w-6xl px-5 pb-8 sm:px-8">
           <nav
-            className="sticky top-16 z-30 flex flex-wrap gap-2 bg-black/95 py-4 backdrop-blur sm:top-20"
+            className="sticky top-16 z-30 flex flex-wrap gap-2 bg-black/95 pt-1 pb-4 backdrop-blur sm:top-20"
             aria-label="Service categories"
           >
             {serviceGroups.map((group) => (
@@ -44,12 +44,12 @@ export default function ServicesPage() {
               <section key={group.id} id={group.id} className="scroll-mt-64">
                 <h2 className="font-display text-[clamp(2rem,4vw,3rem)] leading-none text-ivory">{group.title}</h2>
                 <p className="mt-4 max-w-prose text-lg text-grey">{group.intro}</p>
-                <div className="mt-8 space-y-4">
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   {group.items.map((item) => (
                     <article
                       key={item.id}
                       id={item.id}
-                      className="scroll-mt-28 rounded-3xl border border-ivory/10 bg-maroon-tint p-6"
+                      className="scroll-mt-28 flex h-full flex-col rounded-3xl border border-ivory/10 bg-maroon-tint p-5"
                     >
                       <h3 className="font-display text-2xl text-ivory">{item.title}</h3>
                       <p className="mt-2 max-w-prose text-grey">{item.description}</p>

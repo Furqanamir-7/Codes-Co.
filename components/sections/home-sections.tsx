@@ -13,7 +13,7 @@ import { CtaBand, SectionHeading } from "@/components/shared/page-hero"
 export function Marquee() {
   const row = [...marqueeItems, ...marqueeItems]
   return (
-    <div className="marquee overflow-hidden border-y border-ivory/10 bg-black py-4">
+    <div className="marquee shrink-0 overflow-hidden border-y border-ivory/10 bg-black py-3 sm:py-4">
       <div className="marquee-track flex w-max gap-8 pr-8 motion-reduce:hidden">
         {row.map((item, index) => (
           <span key={`${item}-${index}`} className="flex items-center gap-8 text-sm text-ivory">

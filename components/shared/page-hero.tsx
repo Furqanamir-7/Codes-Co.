@@ -3,12 +3,16 @@ import type { ReactNode } from "react"
 export function PageHero({
   title,
   children,
+  tight = false,
 }: {
   title: string
   children: ReactNode
+  tight?: boolean
 }) {
   return (
-    <header className="relative overflow-hidden bg-black pt-32 pb-16 sm:pt-40 sm:pb-20">
+    <header
+      className={`relative overflow-hidden bg-black pt-32 sm:pt-40 ${tight ? "pb-3 sm:pb-4" : "pb-16 sm:pb-20"}`}
+    >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(104,0,24,0.55),transparent_42%)]" />
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
         <h1 className="max-w-4xl font-display text-[clamp(2.5rem,6vw,4.6rem)] leading-[0.96] tracking-tight text-ivory">

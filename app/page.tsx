@@ -19,8 +19,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <Marquee />
+      <div className="flex h-dvh flex-col">
+        <Hero />
+        <Marquee />
+      </div>
       <ServicesPreview />
       <FeaturedProjects />
       <Why />
