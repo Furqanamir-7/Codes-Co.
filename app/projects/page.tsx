@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <>
-      <PageHero title="Work you can open.">
-        Every project below is a live site. The card opens it in a new tab. The case study is a
-        short note on what the site is for — no invented metrics.
+      <PageHero title="An index of the work.">
+        Eleven live sites. The name opens the site in a new tab. The case study is a short account
+        of what it is for.
       </PageHero>
       <section className="bg-black pb-24">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto w-full max-w-4xl px-5 sm:px-8">
           <ProjectBrowser />
         </div>
       </section>
