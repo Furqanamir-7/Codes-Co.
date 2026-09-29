@@ -9,7 +9,7 @@ export function PageHero({
 }) {
   return (
     <header className="relative overflow-hidden bg-black pt-32 pb-16 sm:pt-40 sm:pb-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(157,0,41,0.35),transparent_42%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(104,0,24,0.55),transparent_42%)]" />
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
         <h1 className="max-w-4xl font-display text-[clamp(2.5rem,6vw,4.6rem)] leading-[0.96] tracking-tight text-ivory">
           {title}
@@ -28,7 +28,7 @@ export function CtaBand({
   body?: string
 }) {
   return (
-    <section className="bg-[linear-gradient(135deg,#9D0029_0%,#680018_100%)]">
+    <section className="bg-maroon-deep">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-5 py-16 sm:px-8 sm:py-20 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-xl">
           <h2 className="font-display text-[clamp(2rem,4vw,3.4rem)] leading-[1] tracking-tight text-ivory">

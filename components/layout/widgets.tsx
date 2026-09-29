@@ -13,7 +13,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed right-4 bottom-4 z-40 inline-flex size-14 items-center justify-center rounded-full bg-maroon text-ivory shadow-[0_12px_30px_-12px_rgba(157,0,41,0.9)] transition hover:-translate-y-0.5 hover:bg-maroon-deep sm:right-6 sm:bottom-6"
+      className="fixed right-4 bottom-4 z-40 inline-flex size-14 items-center justify-center rounded-full bg-maroon-deep text-ivory shadow-[0_12px_30px_-12px_rgba(104,0,24,0.9)] transition hover:-translate-y-0.5 hover:bg-maroon-tint sm:right-6 sm:bottom-6"
     >
       <WhatsAppIcon />
     </a>
@@ -63,7 +63,7 @@ export function CursorGlow() {
       ref={glow}
       hidden
       aria-hidden="true"
-      className="pointer-events-none fixed z-30 size-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-maroon/15 blur-3xl"
+      className="pointer-events-none fixed z-30 size-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-maroon-deep/25 blur-3xl"
     />
   )
 }

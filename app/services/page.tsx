@@ -81,7 +81,7 @@ export default function ServicesPage() {
                 key={pack.name}
                 className={`flex h-full flex-col rounded-3xl p-6 text-ivory ${
                   pack.highlighted
-                    ? "border-2 border-ivory bg-maroon"
+                    ? "border-2 border-ivory bg-maroon-deep"
                     : "border border-maroon bg-maroon-tint"
                 }`}
               >

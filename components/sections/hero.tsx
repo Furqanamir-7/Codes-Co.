@@ -39,7 +39,7 @@ export function Hero() {
 
   return (
     <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-black pt-24">
-      <div className="orb pointer-events-none absolute -left-20 top-24 size-[28rem] rounded-full bg-maroon/25 blur-3xl" />
+      <div className="orb pointer-events-none absolute -left-20 top-24 size-[28rem] rounded-full bg-maroon-deep/40 blur-3xl" />
       <div
         className="orb pointer-events-none absolute right-0 bottom-0 size-[24rem] rounded-full bg-maroon-deep/50 blur-3xl"
         style={{ animationDelay: "-8s" }}
@@ -75,7 +75,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="flex flex-col gap-4"
         >
-          <div className="overflow-hidden rounded-3xl border border-ivory/10 shadow-[0_30px_80px_-40px_rgba(157,0,41,0.8)]">
+          <div className="overflow-hidden rounded-3xl border border-ivory/10 shadow-[0_30px_80px_-40px_rgba(104,0,24,0.8)]">
             <Image
               src="/brand/lockup-hero.webp"
               alt="CODE & CO. wordmark and the tagline Websites, Ideas, Beyond"

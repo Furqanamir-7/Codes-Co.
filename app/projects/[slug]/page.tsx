@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
             href={project.url}
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-flex h-12 items-center rounded-full bg-[linear-gradient(135deg,#9D0029_0%,#680018_100%)] px-6 text-ivory"
+            className="mt-8 inline-flex h-12 items-center rounded-full bg-maroon-deep px-6 text-ivory hover:bg-maroon-tint"
           >
             Visit the live site
           </a>

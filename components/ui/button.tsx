@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-br from-maroon to-maroon-deep text-ivory shadow-[0_12px_30px_-16px_rgba(157,0,41,0.9)] hover:from-maroon-deep hover:to-maroon-deep",
+          "bg-maroon-deep text-ivory shadow-[0_12px_30px_-16px_rgba(104,0,24,0.9)] hover:bg-maroon-tint",
         outline:
           "border-ivory/35 bg-transparent text-ivory hover:border-ivory hover:bg-ivory/10",
         ivory:

@@ -32,7 +32,7 @@ export function ProjectBrowser() {
                 aria-pressed={active}
                 onClick={() => setFilter(category)}
                 className={`inline-flex min-h-11 items-center rounded-full px-3.5 text-sm transition ${
-                  active ? "bg-maroon text-ivory" : "text-grey hover:bg-maroon-tint hover:text-ivory"
+                  active ? "bg-maroon-deep text-ivory" : "text-grey hover:bg-maroon-tint hover:text-ivory"
                 }`}
               >
                 {category}
@@ -77,7 +77,7 @@ export function ProjectBrowser() {
                         href={project.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex min-h-11 items-center rounded-full bg-maroon px-5 text-sm text-ivory no-underline transition hover:bg-maroon-deep"
+                        className="inline-flex min-h-11 items-center rounded-full bg-maroon-deep px-5 text-sm text-ivory no-underline transition hover:bg-maroon-tint"
                       >
                         Open site
                       </a>

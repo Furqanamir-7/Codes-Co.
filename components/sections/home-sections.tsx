@@ -86,7 +86,7 @@ export function FeaturedProjects() {
                       sizes="(min-width: 1024px) 33vw, 100vw"
                       className="object-cover object-top transition duration-700 group-hover:scale-105 motion-reduce:transition-none"
                     />
-                    <div className="absolute inset-x-0 bottom-0 translate-y-full bg-maroon/90 px-5 py-4 text-sm text-ivory transition duration-500 group-hover:translate-y-0 motion-reduce:translate-y-0">
+                    <div className="absolute inset-x-0 bottom-0 translate-y-full bg-maroon-deep/90 px-5 py-4 text-sm text-ivory transition duration-500 group-hover:translate-y-0 motion-reduce:translate-y-0">
                       Open the live site
                     </div>
                   </div>
@@ -128,7 +128,7 @@ export function Why() {
           {why.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <article className="h-full rounded-2xl border border-maroon bg-maroon-tint p-5 text-ivory">
-                <span className="inline-flex size-10 items-center justify-center rounded-full bg-maroon text-sm text-ivory">
+                <span className="inline-flex size-10 items-center justify-center rounded-full bg-maroon-deep text-sm text-ivory">
                   {index + 1}
                 </span>
                 <h3 className="mt-4 font-display text-xl text-ivory">{item.title}</h3>
@@ -216,7 +216,7 @@ export function PortfolioFacts() {
             <dd className="mt-3 font-display text-6xl">{kinds}</dd>
             <p className="mt-2 text-sm text-grey">Business, shop, wedding, web app</p>
           </div>
-          <div className="rounded-2xl bg-maroon p-6 text-ivory">
+          <div className="rounded-2xl bg-maroon-deep p-6 text-ivory">
             <dt className="text-sm text-ivory/80">Studio</dt>
             <dd className="mt-3 font-display text-4xl leading-tight sm:text-5xl">Founder-led</dd>
           </div>

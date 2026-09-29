@@ -15,7 +15,7 @@ export default function NotFound() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-flex h-12 items-center rounded-full bg-[linear-gradient(135deg,#9D0029_0%,#680018_100%)] px-6 text-ivory"
+            className="inline-flex h-12 items-center rounded-full bg-maroon-deep px-6 text-ivory hover:bg-maroon-tint"
           >
             Back home
           </Link>

@@ -11,7 +11,7 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
         <button
           type="button"
           onClick={reset}
-          className="mt-8 inline-flex h-12 items-center rounded-full bg-maroon px-6 text-ivory"
+          className="mt-8 inline-flex h-12 items-center rounded-full bg-maroon-deep px-6 text-ivory hover:bg-maroon-tint"
         >
           Try again
         </button>
