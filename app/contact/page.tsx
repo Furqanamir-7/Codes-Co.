@@ -66,7 +66,7 @@ export default async function ContactPage({
               className={`group block rounded-3xl border border-maroon bg-maroon-tint p-5 no-underline transition hover:-translate-y-0.5 hover:bg-maroon-deep sm:p-6 ${channel.span}`}
             >
               <span className="block text-xs tracking-[0.16em] text-grey uppercase">{channel.label}</span>
-              <span className="mt-3 block font-display text-xl leading-tight break-all text-ivory transition group-hover:text-white sm:text-2xl">
+              <span className="mt-2 block font-display text-lg leading-snug break-all text-ivory transition group-hover:text-white sm:text-xl">
                 {channel.value}
               </span>
             </a>
@@ -75,8 +75,8 @@ export default async function ContactPage({
       </section>
       <section className="bg-ivory py-16 text-black sm:py-24">
         <div className="mx-auto w-full max-w-3xl px-5 sm:px-8">
-          <h2 className="font-display text-4xl leading-none">Send a note</h2>
-          <p className="mt-4 max-w-prose text-lg text-black/70">
+          <h2 className="font-display text-3xl leading-none">Send a note</h2>
+          <p className="mt-3 max-w-prose text-base text-black/70">
             A name, the kind of site, and a sentence about the job is enough to start.
           </p>
           <div className="mt-10">

@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import {
   Accordion,
   AccordionItem,
   AccordionPanel,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { QuoteChooser } from "@/components/services/quote-chooser"
 import { CtaBand, PageHero, SectionHeading } from "@/components/shared/page-hero"
 import { faqs, packages } from "@/data/content"
 import { serviceGroups } from "@/data/services"
@@ -24,13 +24,16 @@ export default function ServicesPage() {
         exists for that.
       </PageHero>
       <div className="bg-black">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 pb-8 sm:px-8 lg:grid-cols-[220px_1fr] lg:gap-16">
-          <nav className="sticky top-16 z-30 flex flex-wrap gap-2 bg-black/95 py-3 backdrop-blur sm:top-20 lg:top-28 lg:block lg:space-y-1 lg:bg-transparent lg:py-0" aria-label="Service categories">
+        <div className="mx-auto w-full max-w-6xl px-5 pb-8 sm:px-8">
+          <nav
+            className="sticky top-16 z-30 flex flex-wrap gap-2 bg-black/95 py-4 backdrop-blur sm:top-20"
+            aria-label="Service categories"
+          >
             {serviceGroups.map((group) => (
               <a
                 key={group.id}
                 href={`#${group.id}`}
-                className="inline-flex min-h-11 items-center rounded-full border border-ivory/15 px-3 text-sm text-grey hover:border-maroon hover:text-ivory lg:flex lg:min-h-10 lg:rounded-none lg:border-0 lg:px-0"
+                className="inline-flex min-h-11 items-center rounded-full border border-ivory/20 bg-maroon-tint px-4 text-sm text-ivory no-underline hover:border-maroon hover:bg-maroon-deep"
               >
                 {group.title}
               </a>
@@ -38,7 +41,7 @@ export default function ServicesPage() {
           </nav>
           <div className="space-y-20 pb-20">
             {serviceGroups.map((group) => (
-              <section key={group.id} id={group.id} className="scroll-mt-28">
+              <section key={group.id} id={group.id} className="scroll-mt-64">
                 <h2 className="font-display text-[clamp(2rem,4vw,3rem)] leading-none text-ivory">{group.title}</h2>
                 <p className="mt-4 max-w-prose text-lg text-grey">{group.intro}</p>
                 <div className="mt-8 space-y-4">
@@ -55,12 +58,7 @@ export default function ServicesPage() {
                           <li key={point}>· {point}</li>
                         ))}
                       </ul>
-                      <Link
-                        href={`/contact?type=${item.quote}`}
-                        className="mt-5 inline-flex min-h-11 items-center text-sm text-ivory no-underline hover:text-white"
-                      >
-                        Get a quote
-                      </Link>
+                      <QuoteChooser id={item.id} service={item.title} />
                     </article>
                   ))}
                 </div>

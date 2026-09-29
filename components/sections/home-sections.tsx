@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion, useReducedMotion } from "framer-motion"
+import { useReducedMotion } from "framer-motion"
 import { expectations, marqueeItems, process, why } from "@/data/content"
 import { projects } from "@/data/projects"
 import { homeServices } from "@/data/services"
@@ -162,65 +162,6 @@ export function Process() {
             </Reveal>
           ))}
         </ol>
-      </div>
-    </section>
-  )
-}
-
-function useCount(target: number, start: boolean) {
-  const reduce = useReducedMotion()
-  const [value, setValue] = useState(reduce ? target : 0)
-  useEffect(() => {
-    if (!start) return
-    if (reduce) {
-      const frame = requestAnimationFrame(() => setValue(target))
-      return () => cancelAnimationFrame(frame)
-    }
-    const began = performance.now()
-    let frame = 0
-    const tick = (now: number) => {
-      const progress = Math.min(1, (now - began) / 900)
-      setValue(Math.round(target * (1 - Math.pow(1 - progress, 3))))
-      if (progress < 1) frame = requestAnimationFrame(tick)
-    }
-    frame = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(frame)
-  }, [reduce, start, target])
-  return value
-}
-
-export function PortfolioFacts() {
-  const [start, setStart] = useState(false)
-  const sites = useCount(11, start)
-  const kinds = useCount(4, start)
-  return (
-    <section className="bg-ivory py-20 text-black sm:py-28">
-      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <Reveal>
-          <SectionHeading title="In this portfolio" tone="dark">
-            Counts below are things you can check on this site. We do not publish invented client
-            totals.
-          </SectionHeading>
-        </Reveal>
-        <motion.dl
-          onViewportEnter={() => setStart(true)}
-          viewport={{ once: true, margin: "-80px" }}
-          className="mt-12 grid gap-4 sm:grid-cols-3"
-        >
-          <div className="rounded-2xl bg-black p-6 text-ivory">
-            <dt className="text-sm text-grey">Live sites linked here</dt>
-            <dd className="mt-3 font-display text-6xl">{sites}</dd>
-          </div>
-          <div className="rounded-2xl bg-black p-6 text-ivory">
-            <dt className="text-sm text-grey">Kinds of work in that set</dt>
-            <dd className="mt-3 font-display text-6xl">{kinds}</dd>
-            <p className="mt-2 text-sm text-grey">Business, shop, wedding, web app</p>
-          </div>
-          <div className="rounded-2xl bg-maroon-deep p-6 text-ivory">
-            <dt className="text-sm text-ivory/80">Studio</dt>
-            <dd className="mt-3 font-display text-4xl leading-tight sm:text-5xl">Founder-led</dd>
-          </div>
-        </motion.dl>
       </div>
     </section>
   )

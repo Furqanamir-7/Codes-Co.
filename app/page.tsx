@@ -5,7 +5,6 @@ import {
   FeaturedProjects,
   HomeClose,
   Marquee,
-  PortfolioFacts,
   Process,
   ServicesPreview,
   Why,
@@ -26,7 +25,6 @@ export default function HomePage() {
       <FeaturedProjects />
       <Why />
       <Process />
-      <PortfolioFacts />
       <Expectations />
       <HomeClose />
     </>
