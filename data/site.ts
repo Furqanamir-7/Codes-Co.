@@ -2,6 +2,7 @@ export const site = {
   name: "CODE & CO.",
   tagline: "Websites • Ideas • Beyond",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "furqanamir2705@gmail.com",
+  emails: ["codesandcostudio@gmail.com", "furqanamir2705@gmail.com"] as const,
   phoneDisplay: "+92 326 2803870",
   phoneTel: "+923262803870",
   whatsappDigits: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923262803870",

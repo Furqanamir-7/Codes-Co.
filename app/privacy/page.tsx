@@ -25,6 +25,10 @@ export default function PrivacyPage() {
             <a className="font-medium text-maroon no-underline" href={`mailto:${site.email}`}>
               {site.email}
             </a>
+            . You can also write the studio at{" "}
+            <a className="font-medium text-maroon no-underline" href={`mailto:${site.emails[0]}`}>
+              {site.emails[0]}
+            </a>
             . In that case the message leaves from your account, not from a server we control.
           </p>
           <p>
@@ -33,7 +37,7 @@ export default function PrivacyPage() {
             advertising cookies.
           </p>
           <p>
-            Questions about a message you already sent can go to the same address, or on WhatsApp at{" "}
+            Questions about a message you already sent can go to either address, or on WhatsApp at{" "}
             {site.phoneDisplay}.
           </p>
         </div>

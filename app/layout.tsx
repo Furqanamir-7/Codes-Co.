@@ -52,7 +52,7 @@ const organization = {
   "@type": "Organization",
   name: "CODE & CO.",
   url: siteUrl,
-  email: site.email,
+  email: [...site.emails],
   telephone: site.phoneTel,
   founder: {
     "@type": "Person",

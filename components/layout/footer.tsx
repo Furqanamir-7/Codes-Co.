@@ -73,11 +73,13 @@ export function Footer() {
         <div>
           <p className="text-sm text-ivory">Contact</p>
           <ul className="mt-4 space-y-2 text-sm text-grey">
-            <li>
-              <a className="hover:text-ivory" href={`mailto:${site.email}`}>
-                {site.email}
-              </a>
-            </li>
+            {site.emails.map((address) => (
+              <li key={address}>
+                <a className="hover:text-ivory no-underline" href={`mailto:${address}`}>
+                  {address}
+                </a>
+              </li>
+            ))}
             <li>
               <a className="hover:text-ivory" href={`tel:${site.phoneTel}`}>
                 {site.phoneDisplay}

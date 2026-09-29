@@ -34,14 +34,16 @@ export default async function ContactPage({
                 Messages are read every day. Expect a reply within a day.
               </p>
               <ul className="mt-8 divide-y divide-ivory/10">
-                <li>
-                  <a href={`mailto:${site.email}`} className="group block py-5 no-underline">
-                    <span className="block text-xs tracking-[0.16em] text-grey uppercase">Email</span>
-                    <span className="mt-2 block font-display text-2xl leading-tight break-all text-ivory transition group-hover:text-white">
-                      {site.email}
-                    </span>
-                  </a>
-                </li>
+                {site.emails.map((address) => (
+                  <li key={address}>
+                    <a href={`mailto:${address}`} className="group block py-5 no-underline">
+                      <span className="block text-xs tracking-[0.16em] text-grey uppercase">Email</span>
+                      <span className="mt-2 block font-display text-2xl leading-tight break-all text-ivory transition group-hover:text-white">
+                        {address}
+                      </span>
+                    </a>
+                  </li>
+                ))}
                 <li>
                   <a href={`tel:${site.phoneTel}`} className="group block py-5 no-underline">
                     <span className="block text-xs tracking-[0.16em] text-grey uppercase">Phone</span>

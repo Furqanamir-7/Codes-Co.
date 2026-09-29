@@ -95,7 +95,18 @@ export function ContactForm({ initialType }: { initialType?: string }) {
     return (
       <div className="rounded-3xl border border-maroon/30 bg-white p-8" role="status">
         <h2 className="font-display text-3xl text-black">Thanks. We&apos;ll reply within a day.</h2>
-        <p className="mt-3 text-black/70">Your note is with {site.email}.</p>
+        <p className="mt-3 text-black/70">
+          Your note is with{" "}
+          {site.emails.map((address, index) => (
+            <span key={address}>
+              {index > 0 ? " and " : null}
+              <a className="font-medium text-maroon no-underline" href={`mailto:${address}`}>
+                {address}
+              </a>
+            </span>
+          ))}
+          .
+        </p>
         <Button type="button" className="mt-6" size="lg" onClick={() => setStatus({ state: "idle" })}>
           Send another
         </Button>
@@ -162,7 +173,15 @@ export function ContactForm({ initialType }: { initialType?: string }) {
       ) : null}
       {status.state === "sent" && status.via === "mailto" ? (
         <p className="rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-black" role="status">
-          Your email app should open with this note addressed to {site.email}. Send it from there and
+          Your email app should open with this note addressed to{" "}
+          <a className="font-medium text-maroon no-underline" href={`mailto:${site.email}`}>
+            {site.email}
+          </a>
+          . You can also write{" "}
+          <a className="font-medium text-maroon no-underline" href={`mailto:${site.emails[0]}`}>
+            {site.emails[0]}
+          </a>
+          . Send it from there and
           we will reply within a day. If nothing opened,{" "}
           <a className="font-medium text-maroon no-underline" href={status.mailto}>
             try the email link again
